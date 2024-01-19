@@ -1,4 +1,5 @@
-# UMvelocityVSresearch
+# Artificial Neural Networks for Real-World Data-Driven Virtual Sensors in Vehicle Suspension for UM vertical velocity estimation
+
 This repository is for MATLAB code to train and test UM vertical velocity Virtual Sensors, researched by the Transport and Logistics Competence Centre of Vilnius Gediminas Technical University, Vilnius, Lithuania
 
 Trained models for selected best window size for each type of artificial neural network (ANN) are in 'Trained models' folder.
