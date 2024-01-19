@@ -10,10 +10,10 @@ There are validation and testing files for each time network in the repository's
 There are launch files for the grid and Bayesian search combined to train, validate, and select the best structure for specified window sizes. It used a grid search for window size, for each window size uses Bayesian search to select the best ANN hyperparameters. It will output a Bayesian search report for each window size and all trained networks into separate folders for each window size.
 
 Requirements to launch the code:
-* Linux or Windows computer
-* MATLAB at least R2019b with
-** Statistics and Machine Learning Toolbox
-** Deep Learning Toolbox
+- Linux or Windows computer
+- MATLAB at least R2019b with
+  - Statistics and Machine Learning Toolbox
+  - Deep Learning Toolbox
 
 Please reference our paper if you use our code for research:
 To be published soon and will be here...
