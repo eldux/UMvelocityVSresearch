@@ -11,7 +11,7 @@ There are launch files for the grid and Bayesian search combined to train, valid
 
 Requirements to launch the code:
 - Linux or Windows computer
-- MATLAB at least R2019b with
+- MATLAB at least R2019b with:
   - Statistics and Machine Learning Toolbox
   - Deep Learning Toolbox
 
