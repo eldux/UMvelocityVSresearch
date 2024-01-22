@@ -50,7 +50,7 @@ net = trainNetwork(XTrain,YTrain,layers,options);
 YPred = predict(net,XValid,'MiniBatchSize',miniBatchSize);
 
 rmse = sqrt(mean((YPred(:) - YValid(:)).^2));
-save(folder + "MLP_layer1_"+num2str(parameters.fc1_units)+"_dp.mat", "net", "rmse");
+save(folder + "MLP_1layer_w"+num2str(window)+"_"+num2str(parameters.fc1_units)+".mat", "net", "rmse");
 
 end
 

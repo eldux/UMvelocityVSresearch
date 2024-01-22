@@ -60,7 +60,7 @@ net = trainNetwork(XTrain,YTrain,layers,options);
 YPred = predict(net,XValid,'MiniBatchSize',miniBatchSize);
 
 rmse = sqrt(mean((YPred(:) - YValid(:)).^2));
-save(folder + "conv1D_"+num2str(parameters.conv1_units)+"_"+num2str(parameters.conv1_size)+"_"+num2str(conv1_stride)+"_"+num2str(parameters.conv2_units)+"_"+num2str(parameters.conv2_size)+"_"+num2str(conv2_stride)+"_"+num2str(parameters.conv3_units)+"_"+num2str(parameters.conv3_size)+"_"+num2str(conv3_stride)+"_dp_fc_"+num2str(parameters.fc1_units)+".mat", "net", "rmse");
+save(folder + "CNN_2layers_w"+num2str(window)+'_'+num2str(parameters.conv1_units)+"_"+num2str(parameters.conv1_size)+"_"+num2str(conv1_stride(2))+"__"+num2str(parameters.conv2_units)+"_"+num2str(parameters.conv2_size)+"_"+num2str(conv2_stride(2))+"__"+num2str(parameters.conv3_units)+"_"+num2str(parameters.conv3_size)+"_"+num2str(conv3_stride(2))+"__"+num2str(parameters.fc1_units)+".mat", "net", "rmse");
 
 end
 

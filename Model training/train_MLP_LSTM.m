@@ -1,4 +1,4 @@
-function rmse = trainMLP_LSTM(XTrain, YTrain, XValid, YValid, parameters, folder, window)
+function rmse = train_MLP_LSTM(XTrain, YTrain, XValid, YValid, parameters, folder, window)
 % trainLSTMx1_FCx1 builds and trains net with defined parameters for
 % hyperparameter tunning for network, training options remains unchanged
 %   trainLSTMx1_FCx1 net: SequenceInput>LSTM>FC->DP->FC->RegresionOutput
@@ -18,7 +18,7 @@ layers = [ ...
     dropoutLayer(0.2,"Name","dropout2")
     sequenceUnfoldingLayer('Name', 'unfold')
     flattenLayer('Name','flatten_1')
-    lstmLayer(parameters.lstm1_units,'OutputMode','last', 'Name', 'lstm_1')
+    lstmLayer(parameters.lstm_units,'OutputMode','last', 'Name', 'lstm_1')
     fullyConnectedLayer(numResponses, 'Name', 'fc_3')
     regressionLayer('Name','regression')];
 
@@ -57,7 +57,7 @@ net = trainNetwork(XTrain,YTrain,lgraph,options);
 YPred = predict(net,XValid,'MiniBatchSize',miniBatchSize);
 
 rmse = sqrt(mean((YPred(:) - YValid(:)).^2));
-save(folder + "fc_"+num2str(parameters.fc1_units)+"_"+num2str(parameters.fc2_units)+"_lstm_"+num2str(parameters.lstm1_units)+".mat", "net", "rmse")
+save(folder + "MLP-LSTM_w"+num2str(window)+'_'+num2str(parameters.fc1_units)+"_"+num2str(parameters.fc2_units)+"__"+num2str(parameters.lstm_units)+".mat", "net", "rmse")
 
 end
 

@@ -49,7 +49,7 @@ net = trainNetwork(XTrain,YTrain,layers,options);
 YPred = predict(net,XValid,'MiniBatchSize',miniBatchSize);
 
 rmse = sqrt(mean((YPred(:) - YValid(:)).^2));
-save(folder + "bilstm_last_"+num2str(parameters.lstm_units)+"_fc_"+num2str(parameters.fc_units)+"_dp.mat", "net", "rmse")
+save(folder + "LSTM_w"+num2str(window)+"_"+num2str(parameters.lstm_units)+"__"+num2str(parameters.fc_units)+".mat", "net", "rmse")
 
 end
 

@@ -10,7 +10,7 @@ numResponses = size(YTrain,2);
 
 layers = [ ...
     sequenceInputLayer(numFeatures)
-    bilstmLayer(parameters.lstm_units,'OutputMode','last')
+    bilstmLayer(parameters.bilsmt_units,'OutputMode','last')
     fullyConnectedLayer(parameters.fc_units)
     dropoutLayer(0.5)
     fullyConnectedLayer(numResponses)
@@ -49,7 +49,7 @@ net = trainNetwork(XTrain,YTrain,layers,options);
 YPred = predict(net,XValid,'MiniBatchSize',miniBatchSize);
 
 rmse = sqrt(mean((YPred(:) - YValid(:)).^2));
-save(folder + "bilstm_last_"+num2str(parameters.lstm_units)+"_fc_"+num2str(parameters.fc_units)+"_dp.mat", "net", "rmse")
+save(folder + "BiLSTM_w"+num2str(window)+"_"+num2str(parameters.bilsmt_units)+"__"+num2str(parameters.fc_units)+".mat", "net", "rmse")
 
 end
 
