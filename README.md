@@ -17,7 +17,6 @@ Requirements to launch the code:
   - Deep Learning Toolbox
 
 Please reference our paper if you use our code for research:
-
-To be published soon and will be here...
+E. Šabanovič, P. Kojis, V. Ivanov, M. Dhaens and V. Skrickij, "Development and Evaluation of Artificial Neural Networks for Real-World Data-Driven Virtual Sensors in Vehicle Suspension," in IEEE Access, doi: 10.1109/ACCESS.2024.3356715.
 
 If you need any help contact the corresponding author of the research paper. We are interested in scientific and industrial collaboration in implementing Virtual Sensors into vehicles and any other systems.
